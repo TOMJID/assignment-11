@@ -42,7 +42,7 @@ function Dashboard() {
       <section className="wrapper ">
         {/* page tittle section */}
         <div className="bg-zinc-200 dark:bg-zinc-800">
-          <div className="max-w-7xl mx-auto py-6 px-6 ">
+          <div className="max-w-5xl mx-auto py-6 px-6 ">
             <div className="sm:flex justify-between  md:grid grid-cols-2 ">
               <div>
                 <p className="text-zinc-500">Welcome back</p>
@@ -79,7 +79,7 @@ function Dashboard() {
           </div>
         </div>
         {/* card section */}
-        <div className="max-w-7xl mx-auto py-6 px-6 ">
+        <div className="max-w-5xl mx-auto py-6 px-6 ">
           <Card />
         </div>
       </section>
