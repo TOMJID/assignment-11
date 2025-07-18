@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "img-url": "./card1.png",
+    "tittle": "Whitechapel Rd",
+    "location": "Tulare County,Los Angles, CA 23415",
+    "cost": 1456654
+  },
+  {
+    "id": 2,
+    "img-url": "./card2.png",
+    "tittle": "Whitechapel Rd",
+    "location": "Tulare County,Los Angles, CA 23415",
+    "cost": 1456654
+  },
+  {
+    "id": 3,
+    "img-url": "./card3.png",
+    "tittle": "Whitechapel Rd",
+    "location": "Tulare County,Los Angles, CA 23415",
+    "cost": 1456654
+  },
+  {
+    "id": 4,
+    "img-url": "./card4.png",
+    "tittle": "Whitechapel Rd",
+    "location": "Tulare County,Los Angles, CA 23415",
+    "cost": 1456654
+  },
+  {
+    "id": 5,
+    "img-url": "./card5.png",
+    "tittle": "Whitechapel Rd",
+    "location": "Tulare County,Los Angles, CA 23415",
+    "cost": 1456654
+  },
+  {
+    "id": 6,
+    "img-url": "./card6.png",
+    "tittle": "Whitechapel Rd",
+    "location": "Tulare County,Los Angles, CA 23415",
+    "cost": 1456654
+  }
+]

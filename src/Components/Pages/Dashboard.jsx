@@ -1,4 +1,6 @@
 import { Input, Select, Button } from "@heroui/react";
+import Card from "../Cards";
+
 const SearchIcon = ({
   size = 24,
   strokeWidth = 1.5,
@@ -36,41 +38,52 @@ const SearchIcon = ({
 
 function Dashboard() {
   return (
-    <div className="wrapper bg-zinc-200">
-      <section className="max-w-5xl mx-auto py-6 px-6 ">
-        <div className="sm:flex justify-between  md:grid grid-cols-2 ">
-          <div>
-            <p className="text-zinc-500">Welcome back</p>
-            <h1 className="text-3xl font-semibold">Dashboard</h1>
-          </div>
-          <div className="flex justify-end items-center grow space-x-2">
-            <Input
-              classNames={{
-                base: "max-w-full sm:max-w-[10rem] mt-2 h-12",
-                mainWrapper: "h-full",
-                input: "text-small",
-                inputWrapper:
-                  "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
-              }}
-              placeholder="Type to search..."
-              size="sm"
-              startContent={<SearchIcon size={18} />}
-              type="search"
-            />
-            <Select
-              label="Sort by: Date modified"
-              classNames={{
-                base: "max-w-full sm:max-w-[10rem]  h-10",
-                trigger:
-                  "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
-                value: "text-small",
-              }}
-              size="sm"></Select>
-            <Button className="bg-orange-600 py-6 px-10 mt-2">Cypher Ai</Button>
+    <>
+      <section className="wrapper ">
+        {/* page tittle section */}
+        <div className="bg-zinc-200 dark:bg-zinc-800">
+          <div className="max-w-5xl mx-auto py-6 px-6 ">
+            <div className="sm:flex justify-between  md:grid grid-cols-2 ">
+              <div>
+                <p className="text-zinc-500">Welcome back</p>
+                <h1 className="text-3xl font-semibold">Dashboard</h1>
+              </div>
+              <div className="flex justify-end items-center grow space-x-2">
+                <Input
+                  classNames={{
+                    base: "max-w-full sm:max-w-[10rem] mt-2 h-12",
+                    mainWrapper: "h-full",
+                    input: "text-small",
+                    inputWrapper:
+                      "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
+                  }}
+                  placeholder="Type to search..."
+                  size="sm"
+                  startContent={<SearchIcon size={18} />}
+                  type="search"
+                />
+                <Select
+                  label="Sort by: Date modified"
+                  classNames={{
+                    base: "max-w-full sm:max-w-[10rem]  h-10",
+                    trigger:
+                      "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
+                    value: "text-small",
+                  }}
+                  size="sm"></Select>
+                <Button className="bg-orange-600 py-6 px-10 mt-2">
+                  Cypher Ai
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
+        {/* card section */}
+        <div className="max-w-5xl mx-auto py-6 px-6 ">
+          <Card />
+        </div>
       </section>
-    </div>
+    </>
   );
 }
 
