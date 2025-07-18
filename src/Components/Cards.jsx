@@ -5,7 +5,7 @@ function Card() {
       <div className="flex justify-around flex-wrap gap-4 items-center">
         {incidents.map((incident) => (
           <div
-            key={incident.id}
+            key={incident["id"]}
             className="group hover:scale-105 transition-all flex flex-col justify-center items-start w-72 rounded-t-xl rounded-b-lg cursor-pointer">
             <div className="relative ">
               <img src={incident["img-url"]} className="rounded-t-xl p-0.5 " />
