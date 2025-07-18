@@ -35,20 +35,21 @@ const SearchIcon = ({
     </svg>
   );
 };
-
-function Dashboard() {
+function Incidents() {
   return (
     <>
-      <section className="wrapper ">
-        {/* page tittle section */}
-        <div className="bg-zinc-200 dark:bg-zinc-800">
+      <section>
+        <div className="bg-zinc-200 dark:bg-zinc-800 ">
           <div className="max-w-7xl mx-auto py-6 px-6 ">
-            <div className="sm:flex justify-between  md:grid grid-cols-2 ">
+            {/* page tittle section */}
+            <div className="sm:flex justify-between  md:grid grid-cols-5 ">
               <div>
-                <p className="text-zinc-500">Welcome back</p>
-                <h1 className="text-3xl font-semibold">Dashboard</h1>
+                <p className="text-zinc-500">
+                  Home <span>-</span> Incidents
+                </p>
+                <h1 className="text-3xl font-semibold">Incidents</h1>
               </div>
-              <div className="flex justify-end items-center grow space-x-2">
+              <div className="flex justify-end items-center grow-2 space-x-2 col-span-4">
                 <Input
                   classNames={{
                     base: "max-w-full sm:max-w-[10rem] mt-2 h-12",
@@ -63,7 +64,7 @@ function Dashboard() {
                   type="search"
                 />
                 <Select
-                  label="Sort by:"
+                  label="Sort by: "
                   classNames={{
                     base: "max-w-full sm:max-w-[10rem]  h-10",
                     trigger:
@@ -72,13 +73,13 @@ function Dashboard() {
                   }}
                   size="sm"></Select>
                 <Button className="bg-orange-600 py-6 px-10 mt-2">
-                  Cypher Ai
+                  <span className="text-2xl">+</span>New Incident
                 </Button>
               </div>
             </div>
+            {/* card section */}
           </div>
         </div>
-        {/* card section */}
         <div className="max-w-7xl mx-auto py-6 px-6 ">
           <Card />
         </div>
@@ -87,4 +88,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Incidents;

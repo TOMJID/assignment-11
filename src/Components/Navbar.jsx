@@ -17,15 +17,16 @@ function Nav() {
 
   const menuItems = [
     "Dashboard",
-    "Residents",
+    "Incidents",
     "Locations",
     "Activities",
     "Documents",
-    "Gather AI",
+    "Cpyher AI",
   ];
 
   return (
     <Navbar
+      maxWidth="xl"
       onMenuOpenChange={setIsMenuOpen}
       shouldHideOnScroll
       isBordered
@@ -76,12 +77,15 @@ function Nav() {
           <p className="text-[10px]">usmanzafar@gmail.com</p>
         </NavbarItem>
       </NavbarContent>
-
+      {/* mobile menu */}
       <NavbarMenu>
-        <div className="mx-4 mt-2 flex flex-col gap-2">
+        <div className="mx-4 mt-2 flex flex-col gap-2 ">
           {menuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link color="text-zinc-500" className="w-full" href="#" size="lg">
+              <Link
+                className="w-full text-center block rounded-lg py-2 text-zinc-500 transition-colors hover:bg-zinc-300 dark:hover:bg-zinc-700"
+                href="#"
+                size="lg">
                 {item}
               </Link>
             </NavbarMenuItem>
