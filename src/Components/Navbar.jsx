@@ -29,7 +29,7 @@ function Nav() {
       onMenuOpenChange={setIsMenuOpen}
       shouldHideOnScroll
       isBordered
-      className="bg-white">
+      className="bg-zinc-200 shadow-sm">
       <NavbarContent className="md:hidden flex justify-between w-full">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
