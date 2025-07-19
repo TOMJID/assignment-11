@@ -55,13 +55,17 @@ function Nav() {
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           />
           <NavbarBrand className="absolute left-1/2 transform -translate-x-1/2">
+            <NavLink to="/">
               <img src="/Logo.svg" alt="logo " />
+            </NavLink>
           </NavbarBrand>
           <div className="w-8" />
         </NavbarContent>
         <NavbarContent className="hidden md:flex">
           <NavbarBrand>
+            <NavLink to="/">
               <img src="/Logo.svg" alt="logo" />
+            </NavLink>
           </NavbarBrand>
         </NavbarContent>
         <NavbarContent
@@ -87,7 +91,7 @@ function Nav() {
         <NavbarContent justify="end">
           <NavbarItem>
             <Button isIconOnly variant="light" aria-label="Notifications">
-                <img src="/ball.svg" className="w-8" />
+              <img src="/ball.svg" className="w-8" />
             </Button>
           </NavbarItem>
           <NavbarItem>
@@ -97,7 +101,7 @@ function Nav() {
               color="primary"
               name="Usman Zafar"
               size="sm"
-                src="/account.png"
+              src="/account.png"
             />
           </NavbarItem>
           <NavbarItem className="hidden lg:flex flex-col text-zinc-400 -space-y-2">
