@@ -52,8 +52,8 @@ function GetStarted() {
           <div className="flex flex-col justify-center items-center h-full ">
             <h1 className="mt-16 text-4xl font-bold mb-4">Let's get started</h1>
             <p className="px-6 text-md text-center max-w-2xl text-balance text-zinc-400">
-              Lorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit
-              general sac mascho werhoLorem ipsum dolar sit gene
+              Lorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar
+              sit general sac mascho werhoLorem ipsum dolar sit gene
             </p>
           </div>
           {/* Horizontal line */}
@@ -82,7 +82,7 @@ function GetStarted() {
             viewport={{ once: true }}>
             {cardList.map((data, index) => (
               <motion.div key={index} variants={itemVariants}>
-                <Card isPressable shadow="sm" className="w-60 mt-4">
+                <Card isPressable shadow="sm" className="w-60 h-72 mt-4">
                   <CardBody className="overflow-visible p-0">
                     <Image
                       isZoomed
@@ -116,4 +116,3 @@ function GetStarted() {
 }
 
 export default GetStarted;
-
