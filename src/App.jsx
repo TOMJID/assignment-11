@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Nav />}>
           <Route index element={<Dashboard />} />
           <Route path="incidents" element={<Incidents />}>
-            {/* Child route renders inside Incidents's <Outlet /> */}
+            {/* Child route renders inside Incidents's page/> */}
             <Route path="new" element={<GetStarted />} />
             <Route path="step1" element={<Step1 />} />
             <Route path="step2" element={<Step2 />} />
