@@ -1,15 +1,44 @@
 import { Button } from "@heroui/button";
-import { IoClose} from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
+import { Link, useNavigate } from "react-router-dom";
 function StepNev({ progress = 0 }) {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    if (progress > 66) {
+      // From step 3 to 2
+      navigate("/incidents/step2");
+    } else if (progress > 33) {
+      // From step 2 to 1
+      navigate("/incidents/step1");
+    }
+  };
+
+  const handleNext = () => {
+    if (progress < 66) {
+      // From step 1 to 2
+      navigate("/incidents/step2");
+    } else if (progress < 100) {
+      // From step 2 to 3
+      navigate("/incidents/step3");
+    } else {
+      // Finished - navigate back to incidents list
+      navigate("/incidents");
+    }
+  };
+
   return (
     <div className="bg-zinc-200">
       <div className="max-w-7xl mx-auto py-6 px-6 ">
         <div className="md:flex justify-between items-center">
           {/* page title */}
           <div className="flex justify-start items-center space-x-4">
-            <div className="bg-zinc-50 w-12 h-12  rounded-full flex justify-center items-center text-zinc-500 cursor-pointer">
+            <Link
+              to="/incidents"
+              className="bg-zinc-50 w-12 h-12  rounded-full flex justify-center items-center text-zinc-500 cursor-pointer"
+            >
               <IoClose className="size-6" />
-            </div>
+            </Link>
             <div>
               <p className="text-zinc-500">
                 Home<span>-</span> Incident<span>-</span>New Incident
@@ -28,11 +57,19 @@ function StepNev({ progress = 0 }) {
           </div>
           {/* steps btns */}
           <div className="space-x-4 mx-auto mt-2 md:mt-0 md:block flex items-center justify-center">
-            <Button radius="sm" variant="bordered" className=" py-6 px-10 mt-2">
+            <Button
+              onClick={handleBack}
+              disabled={progress < 34}
+              radius="sm"
+              variant="bordered"
+              className=" py-6 px-10 mt-2"
+            >
               back
             </Button>
-            <Button radius="sm" className="bg-orange-600 py-6 px-10 mt-2">
-              Next
+            <Button
+              onClick={handleNext}
+              radius="sm" className="bg-orange-600 py-6 px-10 mt-2">
+              {progress === 100 ? "Finished" : "Next"}
             </Button>
           </div>
         </div>

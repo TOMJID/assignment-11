@@ -1,19 +1,21 @@
 import { Button, Card, CardBody, CardFooter, Image } from "@heroui/react";
+import { useNavigate } from "react-router-dom";
 function GetStarted() {
+  const navigate = useNavigate();
   const points = [1, 2, 3];
   const cardList = [
     {
-      img: "./icon1.svg",
+      img: "/icon1.svg",
       title: "What type of incident! ",
       disc: "Choose the category that best describes the incident",
     },
     {
-      img: "./icon2.svg",
+      img: "/icon2.svg",
       title: "Tell us about the incident? ",
       disc: "Let’s connect the dots and see where to start.",
     },
     {
-      img: "./icon3.svg",
+      img: "/icon3.svg",
       title: "Where did the incident occur? ",
       disc: "Let’s connect the dots and see when it start.",
     },
@@ -66,8 +68,10 @@ function GetStarted() {
           ))}
         </div>
         <Button
+          onClick={() => navigate("/incidents/step1")}
           radius="sm"
-          className="mx-auto px-7 text-white text-md block mt-4 bg-orange-600">
+          className="mx-auto px-7 text-white text-md block mt-4 bg-orange-600"
+        >
           Get Started
         </Button>
       </section>

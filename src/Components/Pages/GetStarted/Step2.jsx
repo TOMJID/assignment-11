@@ -6,7 +6,7 @@ function Step2() {
       <section>
         <StepNev progress={66.6} />
         {/* step 2 body part */}
-        <div className="max-w-7xl mx-auto py-10 px-8 space-y-8">
+        <div className="max-w-5xl mx-auto py-10 px-8 space-y-8">
           <div>
             <h1 className="text-3xl font-semibold">
               Let's give the incident a title?

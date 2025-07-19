@@ -8,3 +8,6 @@
 body {
   font-family: "Onest", sans-serif;
 }
+.active {
+  color: black;
+}
