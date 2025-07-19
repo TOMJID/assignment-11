@@ -1,7 +1,10 @@
-import { Card, Image } from "@heroui/react";
+import { Card, Image, Button } from "@heroui/react";
 import StepNev from "../../StepNev";
+import { useNavigate } from "react-router-dom";
 
 function Step3() {
+  const navigate = useNavigate();
+
   return (
     <>
       <section>
@@ -17,6 +20,7 @@ function Step3() {
             <Image loading="lazy" src="/map.png" alt="map" className="w-full" />
           </Card>
         </div>
+        
       </section>
     </>
   );

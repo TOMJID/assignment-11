@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import {
   Navbar,
   NavbarBrand,
@@ -40,6 +40,7 @@ const menuItems = [
 ];
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const location = useLocation();
 
   return (
     <>
@@ -69,22 +70,27 @@ function Nav() {
         <NavbarContent
           className="hidden  md:flex gap-4 overflow-x-auto"
           justify="center">
-          {menuItems.map((item, index) => (
-            <NavbarItem key={`${item.linkName}-${index}`}>
-              <NavLink
-                to={item.link}
-                end={item.link === "/"}
-                className={({ isActive }) =>
-                  `font-semibold transition-all ease-in-out duration-150 ${
-                    isActive
-                      ? "text-black border-b-2 border-zinc-600 pb-5"
-                      : "text-zinc-400"
-                  }`
-                }>
-                {item.linkName}
-              </NavLink>
-            </NavbarItem>
-          ))}
+          {menuItems.map((item, index) => {
+            const isActive =
+              item.link === "/incidents" &&
+              location.pathname.startsWith("/getstarted");
+            return (
+              <NavbarItem key={`${item.linkName}-${index}`}>
+                <NavLink
+                  to={item.link}
+                  end={item.link === "/"}
+                  className={({ isActive: isNavLinkActive }) =>
+                    `font-semibold transition-all ease-in-out duration-150 ${
+                      isNavLinkActive || isActive
+                        ? "text-black border-b-2 border-zinc-600 pb-5"
+                        : "text-zinc-400"
+                    }`
+                  }>
+                  {item.linkName}
+                </NavLink>
+              </NavbarItem>
+            );
+          })}
         </NavbarContent>
         <NavbarContent justify="end">
           <NavbarItem>

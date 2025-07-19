@@ -16,9 +16,8 @@ function App() {
         {/* Routes with the main shared Navbar */}
         <Route path="/" element={<Nav />}>
           <Route index element={<Dashboard />} />
-          <Route path="incidents" element={<Incidents />}>
-            {/* Child route renders inside Incidents's page/> */}
-            <Route path="new" element={<GetStarted />} />
+          <Route path="incidents" element={<Incidents />} />
+          <Route path="/getstarted" element={<GetStarted />}>
             <Route path="step1" element={<Step1 />} />
             <Route path="step2" element={<Step2 />} />
             <Route path="step3" element={<Step3 />} />

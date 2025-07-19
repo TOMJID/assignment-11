@@ -1,6 +1,6 @@
 import StepNev from "../../StepNev";
 import { useState } from "react";
-import { Card } from "@heroui/react";
+import { Card, Button } from "@heroui/react";
 import { FaBiohazard, FaTemperatureHigh } from "react-icons/fa";
 import { FaHouseTsunami } from "react-icons/fa6";
 import { GiFallingRocks, GiBurningForest, GiVolcano } from "react-icons/gi";
@@ -18,6 +18,7 @@ import {
   WiStrongWind,
   WiTornado,
 } from "react-icons/wi";
+import { useNavigate } from "react-router-dom";
 
 const incidentTypes = [
   { id: 1, label: "Avalanche", icon: WiSnow },
@@ -42,6 +43,7 @@ const incidentTypes = [
 
 function Step1() {
   const [selectedId, setSelectedId] = useState(null);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -81,6 +83,7 @@ function Step1() {
             ))}
           </div>
         </div>
+        
       </section>
     </>
   );

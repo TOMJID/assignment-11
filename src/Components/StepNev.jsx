@@ -7,20 +7,20 @@ function StepNev({ progress = 0 }) {
   const handleBack = () => {
     if (progress > 66) {
       // From step 3 to 2
-      navigate("/incidents/step2");
+      navigate("/getstarted/step2");
     } else if (progress > 33) {
       // From step 2 to 1
-      navigate("/incidents/step1");
+      navigate("/getstarted/step1");
     }
   };
 
   const handleNext = () => {
     if (progress < 66) {
       // From step 1 to 2
-      navigate("/incidents/step2");
+      navigate("/getstarted/step2");
     } else if (progress < 100) {
       // From step 2 to 3
-      navigate("/incidents/step3");
+      navigate("/getstarted/step3");
     } else {
       // Finished - navigate back to incidents list
       navigate("/incidents");

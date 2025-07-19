@@ -1,16 +1,12 @@
 import { Input, Select, Button } from "@heroui/react";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import Cards from "../Cards";
 function Incidents() {
-  const location = useLocation();
-  // A nested route is active if the path is not exactly '/incidents'.
-  const isNestedRoute = location.pathname !== "/incidents";
 
   return (
     <>
       <section>
-        {!isNestedRoute && (
           <div className="bg-zinc-200 dark:bg-zinc-800 ">
             <div className="max-w-7xl mx-auto py-6 px-6 ">
               {/* page tittle section */}
@@ -44,7 +40,7 @@ function Incidents() {
                       value: "text-small",
                     }}
                     size="sm"></Select>
-                  <Link to="new">
+                  <Link to="/getstarted">
                     <Button className="bg-orange-600 py-6 px-10 mt-2">
                       <span className="text-2xl">+</span>New Incident
                     </Button>
@@ -53,9 +49,8 @@ function Incidents() {
               </div>
             </div>
           </div>
-        )}
         {/* card section */}
-        <div>{isNestedRoute ? <Outlet /> : <Cards />}</div>
+        <div><Outlet /> <Cards /></div>
       </section>
     </>
   );

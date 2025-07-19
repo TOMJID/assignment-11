@@ -1,6 +1,10 @@
 import StepNev from "../../StepNev";
-import { Input, Textarea } from "@heroui/react";
+import { Input, Textarea, Button } from "@heroui/react";
+import { useNavigate } from "react-router-dom";
+
 function Step2() {
+  const navigate = useNavigate();
+
   return (
     <>
       <section>
@@ -45,6 +49,7 @@ function Step2() {
             />
           </div>
         </div>
+        
       </section>
     </>
   );
