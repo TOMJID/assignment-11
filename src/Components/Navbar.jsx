@@ -47,7 +47,6 @@ function Nav() {
       <Navbar
         maxWidth="xl"
         onMenuOpenChange={setIsMenuOpen}
-        shouldHideOnScroll
         isBordered
         className="bg-zinc-200 shadow-sm">
         <NavbarContent className="md:hidden flex justify-between w-full">

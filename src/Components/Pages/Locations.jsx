@@ -1,11 +1,30 @@
 import { Input, Select, Button, Card, CardBody, Image } from "@heroui/react";
 import { CiSearch } from "react-icons/ci";
 import { FaExplosion, FaLocationDot, FaMoneyBill1 } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 function Locations() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <>
-      <section>
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}>
         {/* page tittle section */}
         <div className="bg-zinc-200 dark:bg-zinc-800">
           <div className="max-w-7xl mx-auto py-6 px-6 ">
@@ -92,32 +111,39 @@ function Locations() {
             {/* location card */}
             <div>
               <h3 className="text-xl font-semibold mb-4">Locations</h3>
-              <div className="flex gap-4 flex-wrap items-center justify-around xl:justify-start">
+              <motion.div
+                className="flex gap-4 flex-wrap items-center justify-around xl:justify-start"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}>
                 {[...Array(4)].map((_, index) => (
-                  <Card
-                    key={index}
-                    isPressable
-                    radius="sm"
-                    shadow="none"
-                    className="w-64 md:w-60 lg:w-56">
-                    <Image
-                      radius="none"
-                      isZoomed
-                      loading="lazy"
-                      src={`/card${index + 1}.png`}
-                      alt="img"
-                      className="rounded-t-lg"
-                    />
-                    <div className="flex px-2 py-2 flex-col text-start items-start border-2 border-t-0 rounded-t-none rounded-lg border-zinc-200">
-                      <h5 className="font-bold text-md">Whitechapel Rd.</h5>
-                      <p className="text-zinc-500 ">
-                        Tulare County, Los Angles, CA 23415
-                      </p>
-                      <h6 className="font-bold text-md mt-2">$60,607</h6>
-                    </div>
-                  </Card>
+                  <motion.div key={index} variants={itemVariants}>
+                    <Card
+                      key={index}
+                      isPressable
+                      radius="sm"
+                      shadow="none"
+                      className="w-64 md:w-60 lg:w-56">
+                      <Image
+                        radius="none"
+                        isZoomed
+                        loading="lazy"
+                        src={`/card${index + 1}.png`}
+                        alt="img"
+                        className="rounded-t-lg"
+                      />
+                      <div className="flex px-2 py-2 flex-col text-start items-start border-2 border-t-0 rounded-t-none rounded-lg border-zinc-200">
+                        <h5 className="font-bold text-md">Whitechapel Rd.</h5>
+                        <p className="text-zinc-500 ">
+                          Tulare County, Los Angles, CA 23415
+                        </p>
+                        <h6 className="font-bold text-md mt-2">$60,607</h6>
+                      </div>
+                    </Card>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </div>
             {/* location activities */}
             <div className="mt-12 border-y-2 border-zinc-200 py-8">
@@ -125,31 +151,38 @@ function Locations() {
               <p className="text-end underline text-zinc-500 cursor-pointer mb-4">
                 See All
               </p>
-              <div className="space-y-4">
+              <motion.div
+                className="space-y-4"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}>
                 {[...Array(2)].map((_, index) => (
-                  <Card
-                    shadow="none"
-                    isPressable
-                    className="flex bg-zinc-100 flex-row items-center gap-4 p-4 w-full">
-                    <Image
-                      loading="lazy"
-                      removeWrapper
-                      isZoomed
-                      width={100}
-                      height={100}
-                      className="rounded-lg object-cover"
-                      src={`/card${index + 1}.png`}
-                    />
-                    <CardBody className="p-0">
-                      <h3 className="text-lg font-semibold">Activity name</h3>
-                      <p className="text-sm text-gray-500">
-                        Location name • 16.12212. -122.1424
-                      </p>
-                      <p className="text-lg font-bold mt-2">$ 1,4566,69</p>
-                    </CardBody>
-                  </Card>
+                  <motion.div key={index} variants={itemVariants}>
+                    <Card
+                      shadow="none"
+                      isPressable
+                      className="flex bg-zinc-100 flex-row items-center gap-4 p-4 w-full">
+                      <Image
+                        loading="lazy"
+                        removeWrapper
+                        isZoomed
+                        width={100}
+                        height={100}
+                        className="rounded-lg object-cover"
+                        src={`/card${index + 1}.png`}
+                      />
+                      <CardBody className="p-0">
+                        <h3 className="text-lg font-semibold">Activity name</h3>
+                        <p className="text-sm text-gray-500">
+                          Location name • 16.12212. -122.1424
+                        </p>
+                        <p className="text-lg font-bold mt-2">$ 1,4566,69</p>
+                      </CardBody>
+                    </Card>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </div>
             {/* location Documents */}
             <div>
@@ -157,31 +190,38 @@ function Locations() {
               <p className="text-end underline text-zinc-500 cursor-pointer mb-4">
                 See All
               </p>
-              <div className="space-y-4">
+              <motion.div
+                className="space-y-4"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}>
                 {[...Array(2)].map((_, index) => (
-                  <Card
-                    shadow="none"
-                    isPressable
-                    className="flex bg-zinc-100 flex-row items-center gap-4 p-4 w-full">
-                    <Image
-                      removeWrapper
-                      isZoomed
-                      loading="lazy"
-                      width={100}
-                      height={100}
-                      className="rounded-lg object-cover"
-                      src={`/card${index + 3}.png`}
-                    />
-                    <CardBody className="p-0">
-                      <h3 className="text-lg font-semibold">Document name</h3>
-                      <p className="text-sm text-gray-500">
-                        Location name • 16.12212. -122.1424
-                      </p>
-                      <p className="text-lg font-bold mt-2">$ 1,4566,69</p>
-                    </CardBody>
-                  </Card>
+                  <motion.div key={index} variants={itemVariants}>
+                    <Card
+                      shadow="none"
+                      isPressable
+                      className="flex bg-zinc-100 flex-row items-center gap-4 p-4 w-full">
+                      <Image
+                        removeWrapper
+                        isZoomed
+                        loading="lazy"
+                        width={100}
+                        height={100}
+                        className="rounded-lg object-cover"
+                        src={`/card${index + 3}.png`}
+                      />
+                      <CardBody className="p-0">
+                        <h3 className="text-lg font-semibold">Document name</h3>
+                        <p className="text-sm text-gray-500">
+                          Location name • 16.12212. -122.1424
+                        </p>
+                        <p className="text-lg font-bold mt-2">$ 1,4566,69</p>
+                      </CardBody>
+                    </Card>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </div>
           </div>
           <div className="xl:col-span-2">
@@ -202,7 +242,7 @@ function Locations() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }

@@ -1,11 +1,17 @@
 import { Input, Select, Button } from "@heroui/react";
 import { CiSearch } from "react-icons/ci";
 import Cards from "../Cards";
+import { motion } from "framer-motion";
 
 function Dashboard() {
   return (
     <>
-      <section>
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
         {/* page tittle section */}
         <div className="bg-zinc-200 dark:bg-zinc-800">
           <div className="max-w-7xl mx-auto py-6 px-6 ">
@@ -48,7 +54,7 @@ function Dashboard() {
         <div>
           <Cards />
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }
