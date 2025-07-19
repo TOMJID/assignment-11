@@ -1,31 +1,42 @@
 import React, { useState } from "react";
 import { Button, Card } from "@heroui/react";
+import { FaBiohazard, FaTemperatureHigh } from "react-icons/fa";
+import { FaHouseTsunami } from "react-icons/fa6";
+import { GiFallingRocks, GiBurningForest, GiVolcano } from "react-icons/gi";
+import { IoClose, IoSunnyOutline } from "react-icons/io5";
+import { RiHandCoinFill } from "react-icons/ri";
 import {
-  FireIcon,
-  BoltIcon,
-  CloudIcon,
-  GlobeAltIcon,
-  // Add more icons as needed
-} from "@heroicons/react/24/solid";
+  WiSnow,
+  WiSnowWind,
+  WiSnowflakeCold,
+  WiEarthquake,
+  WiFlood,
+  WiHail,
+  WiLightning,
+  WiStormShowers,
+  WiStrongWind,
+  WiTornado,
+} from "react-icons/wi";
+
 const incidentTypes = [
-  { id: 1, label: "Avalanche", icon: CloudIcon },
-  { id: 2, label: "Biological", icon: GlobeAltIcon },
-  { id: 3, label: "Blizzard", icon: CloudIcon },
-  { id: 4, label: "Cold/Freezing", icon: CloudIcon },
-  { id: 5, label: "Drought", icon: FireIcon },
-  { id: 6, label: "Earthquake", icon: GlobeAltIcon },
-  { id: 7, label: "Flooding", icon: CloudIcon },
-  { id: 8, label: "Heat Wave", icon: FireIcon },
-  { id: 9, label: "Hail", icon: CloudIcon },
-  { id: 10, label: "Lightning", icon: BoltIcon },
-  { id: 11, label: "Man Made", icon: GlobeAltIcon },
-  { id: 12, label: "Mudslide", icon: CloudIcon },
-  { id: 13, label: "Severe Storm", icon: CloudIcon },
-  { id: 14, label: "Strong Wind", icon: CloudIcon },
-  { id: 15, label: "Tornado", icon: BoltIcon },
-  { id: 16, label: "Tsunami", icon: GlobeAltIcon },
-  { id: 17, label: "Volcanic Eruption", icon: FireIcon },
-  { id: 18, label: "Wildfire", icon: FireIcon },
+  { id: 1, label: "Avalanche", icon: WiSnow },
+  { id: 2, label: "Biological", icon: FaBiohazard },
+  { id: 3, label: "Blizzard", icon: WiSnowWind },
+  { id: 4, label: "Cold/Freezing", icon: WiSnowflakeCold },
+  { id: 5, label: "Drought", icon: IoSunnyOutline },
+  { id: 6, label: "Earthquake", icon: WiEarthquake },
+  { id: 7, label: "Flooding", icon: WiFlood },
+  { id: 8, label: "Heat Wave", icon: FaTemperatureHigh },
+  { id: 9, label: "Hail", icon: WiHail },
+  { id: 10, label: "Lightning", icon: WiLightning },
+  { id: 11, label: "Man Made", icon: RiHandCoinFill },
+  { id: 12, label: "Mudslide", icon: GiFallingRocks },
+  { id: 13, label: "Severe Storm", icon: WiStormShowers },
+  { id: 14, label: "Strong Wind", icon: WiStrongWind },
+  { id: 15, label: "Tornado", icon: WiTornado },
+  { id: 16, label: "Tsunami", icon: FaHouseTsunami },
+  { id: 17, label: "Volcanic Eruption", icon: GiVolcano },
+  { id: 18, label: "Wildfire", icon: GiBurningForest },
 ];
 
 function Step1({ progress = 33.3 }) {
@@ -40,20 +51,7 @@ function Step1({ progress = 33.3 }) {
               {/* page title */}
               <div className="flex justify-start items-center space-x-4">
                 <div className="bg-zinc-50 w-12 h-12  rounded-full flex justify-center items-center text-zinc-500 cursor-pointer">
-                  {" "}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="size-6">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6 18 18 6M6 6l12 12"
-                    />
-                  </svg>
+                  <IoClose className="size-6" />
                 </div>
                 <div>
                   <p className="text-zinc-500">
