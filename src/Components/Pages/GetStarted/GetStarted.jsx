@@ -53,6 +53,8 @@ function GetStarted() {
             <Card key={index} isPressable shadow="sm" className="w-60 mt-4">
               <CardBody className="overflow-visible p-0">
                 <Image
+                  isZoomed
+                  loading="lazy"
                   className="w-fit object-cover h-[140px] p-2"
                   src={data.img}
                   alt={data.title}

@@ -1,14 +1,18 @@
 import incidents from "../assets/incidents.json";
-function Card() {
+import { Card } from "@heroui/react";
+
+function Cards() {
   return (
     <>
       <div className="max-w-7xl mx-auto py-6 px-6 ">
-        <div className="flex justify-around xl:justify-start flex-wrap gap-4 px-2  items-center">
+        <div className="flex justify-around xl:justify-start flex-wrap gap-4 items-center">
           {incidents.map((incident) => (
-            <div
+            <Card
+              isPressable
+              shadow="none"
               key={incident["id"]}
               className="group hover:scale-105 transition-all flex flex-col justify-center items-start w-72 rounded-t-xl rounded-b-lg cursor-pointer">
-              <div className="relative z-[-1]">
+              <div className="relative">
                 <img
                   src={incident["img-url"]}
                   className="rounded-t-xl p-0.5 "
@@ -19,7 +23,7 @@ function Card() {
                   className="absolute top-2 right-2  group-hover:scale-90 transition-all"
                 />
               </div>
-              <div className="space-x-2 mt-1 capitalize">
+              <div className="space-x-2 mt-1 capitalize text-start px-2">
                 <h2 className="text-lg font-semibold">{incident["tittle"]}</h2>
                 <h5 className="text-zinc-400 text-sm mb-1">
                   {incident["location"]}
@@ -33,7 +37,7 @@ function Card() {
                   }).format(incident["cost"])}
                 </h6>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
@@ -41,4 +45,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default Cards;

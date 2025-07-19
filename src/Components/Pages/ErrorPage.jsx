@@ -1,4 +1,6 @@
-import { Button } from "@heroui/button";
+import { Button } from "@heroui/react";
+import { Link } from "react-router-dom";
+
 function ErrorPage() {
   return (
     <>
@@ -6,10 +8,11 @@ function ErrorPage() {
         <h1 className="text-center text-4xl font-bold">
           This page hasn't created yet
         </h1>
-        <Button className="bg-orange-600 mt-4 mx-auto px-8 py-2 rounded-md">
-          {" "}
-          Go Back{" "}
-        </Button>
+        <Link to="/">
+          <Button className="bg-orange-600 mt-4 mx-auto block px-8 py-2 rounded-md">
+            Go Home
+          </Button>
+        </Link>
       </section>
     </>
   );

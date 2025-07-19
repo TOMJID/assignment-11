@@ -7,6 +7,7 @@ import GetStarted from "./Components/Pages/GetStarted/GetStarted";
 import Step1 from "./Components/Pages/GetStarted/Step1";
 import Step2 from "./Components/Pages/GetStarted/Step2";
 import Step3 from "./Components/Pages/GetStarted/Step3";
+import Locations from "./Components/Pages/Locations";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="step2" element={<Step2 />} />
             <Route path="step3" element={<Step3 />} />
           </Route>
+          <Route path="locations" element={<Locations />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>

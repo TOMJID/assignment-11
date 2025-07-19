@@ -1,4 +1,4 @@
-import { Card } from "@heroui/react";
+import { Card, Image } from "@heroui/react";
 import StepNev from "../../StepNev";
 
 function Step3() {
@@ -14,7 +14,7 @@ function Step3() {
             as Possible,or click:Jurisdiction Wide
           </p>
           <Card isPressable className=" mx-auto ">
-            <img src="/map.png" alt="map" className="w-full" />
+            <Image loading="lazy" src="/map.png" alt="map" className="w-full" />
           </Card>
         </div>
       </section>
