@@ -5,7 +5,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
   Button,
   NavbarMenuToggle,
   NavbarMenu,
@@ -76,7 +75,7 @@ function Nav() {
                 to={item.link}
                 end={item.link === "/"}
                 className={({ isActive }) =>
-                  `font-semibold ${
+                  `font-semibold transition-all ease-in-out duration-150 ${
                     isActive
                       ? "text-black border-b-2 border-zinc-600 pb-5"
                       : "text-zinc-400"
