@@ -28,15 +28,14 @@ function StepNev({ progress = 0 }) {
   };
 
   return (
-    <div className="bg-zinc-200">
-      <div className="max-w-7xl mx-auto py-6 px-6 ">
+    <div className=" bg-zinc-200 ">
+      <div className="p-6 max-w-7xl mx-auto">
         <div className="md:flex justify-between items-center">
           {/* page title */}
           <div className="flex justify-start items-center space-x-4">
             <Link
               to="/incidents"
-              className="bg-zinc-50 w-12 h-12  rounded-full flex justify-center items-center text-zinc-500 cursor-pointer"
-            >
+              className="bg-zinc-50 w-12 h-12  rounded-full flex justify-center items-center text-zinc-500 cursor-pointer">
               <IoClose className="size-6" />
             </Link>
             <div>
@@ -62,13 +61,13 @@ function StepNev({ progress = 0 }) {
               disabled={progress < 34}
               radius="sm"
               variant="bordered"
-              className=" py-6 px-10 mt-2"
-            >
+              className=" py-6 px-10 mt-2">
               back
             </Button>
             <Button
               onClick={handleNext}
-              radius="sm" className="bg-orange-600 py-6 px-10 mt-2">
+              radius="sm"
+              className="bg-orange-600 py-6 px-10 mt-2">
               {progress === 100 ? "Finished" : "Next"}
             </Button>
           </div>

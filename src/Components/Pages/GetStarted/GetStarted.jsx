@@ -70,8 +70,7 @@ function GetStarted() {
         <Button
           onClick={() => navigate("/incidents/step1")}
           radius="sm"
-          className="mx-auto px-7 text-white text-md block mt-4 bg-orange-600"
-        >
+          className="mx-auto px-7 text-white text-md block mt-4 bg-orange-600">
           Get Started
         </Button>
       </section>
@@ -80,5 +79,3 @@ function GetStarted() {
 }
 
 export default GetStarted;
-
-//

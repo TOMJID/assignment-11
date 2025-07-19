@@ -79,7 +79,7 @@ function Dashboard() {
           </div>
         </div>
         {/* card section */}
-        <div className="max-w-7xl mx-auto py-6 px-6 ">
+        <div>
           <Card />
         </div>
       </section>

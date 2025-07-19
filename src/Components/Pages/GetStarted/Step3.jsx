@@ -13,8 +13,8 @@ function Step3() {
             enter a GPS, address, or pin point on the map,Try to be as Accurate
             as Possible,or click:Jurisdiction Wide
           </p>
-          <Card isPressable>
-            <img src="./map.png" alt="map" />
+          <Card isPressable className=" mx-auto ">
+            <img src="/map.png" alt="map" className="w-full" />
           </Card>
         </div>
       </section>

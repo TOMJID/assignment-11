@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from "./Components/Navbar";
+import ErrorPage from "./Components/Pages/ErrorPage";
 import Dashboard from "./Components/Pages/Dashboard";
 import Incidents from "./Components/Pages/Incidents";
-import ErrorPage from "./Components/Pages/ErrorPage";
 import GetStarted from "./Components/Pages/GetStarted/GetStarted";
 import Step1 from "./Components/Pages/GetStarted/Step1";
 import Step2 from "./Components/Pages/GetStarted/Step2";

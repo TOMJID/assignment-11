@@ -89,9 +89,7 @@ function Incidents() {
           </div>
         )}
         {/* card section */}
-        <div className="max-w-7xl mx-auto py-6 px-6 ">
-          {isNestedRoute ? <Outlet /> : <Card />}
-        </div>
+        <div>{isNestedRoute ? <Outlet /> : <Card />}</div>
       </section>
     </>
   );
