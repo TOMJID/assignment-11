@@ -3,11 +3,11 @@ import Nav from "./Components/Navbar";
 import ErrorPage from "./Components/Pages/ErrorPage";
 import Dashboard from "./Components/Pages/Dashboard";
 import Incidents from "./Components/Pages/Incidents";
+import Locations from "./Components/Pages/Locations";
 import GetStarted from "./Components/Pages/GetStarted/GetStarted";
 import Step1 from "./Components/Pages/GetStarted/Step1";
 import Step2 from "./Components/Pages/GetStarted/Step2";
 import Step3 from "./Components/Pages/GetStarted/Step3";
-import Locations from "./Components/Pages/Locations";
 
 function App() {
   return (

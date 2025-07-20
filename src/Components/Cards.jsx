@@ -25,15 +25,13 @@ function Cards() {
           className="flex justify-around xl:justify-start flex-wrap gap-4 items-center"
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
-        >
+          animate="visible">
           {incidents.map((incident) => (
             <motion.div key={incident.id} variants={itemVariants}>
               <Card
                 isPressable
                 shadow="none"
-                className="group hover:scale-105 transition-all flex flex-col justify-center items-start w-72 rounded-t-xl rounded-b-lg cursor-pointer"
-              >
+                className="group hover:scale-105 transition-all flex flex-col justify-center items-start w-72 rounded-t-xl rounded-b-lg cursor-pointer">
                 <div className="relative">
                   <img
                     src={incident["img-url"]}
@@ -46,7 +44,9 @@ function Cards() {
                   />
                 </div>
                 <div className="space-x-2 mt-1 capitalize text-start px-2">
-                  <h2 className="text-lg font-semibold">{incident["tittle"]}</h2>
+                  <h2 className="text-lg font-semibold">
+                    {incident["tittle"]}
+                  </h2>
                   <h5 className="text-zinc-400 text-sm mb-1">
                     {incident["location"]}
                   </h5>
